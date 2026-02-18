@@ -1,0 +1,20 @@
+name: claude-sonnet
+provider: anthropic
+preferredFormat: xml
+systemPromptStyle: |
+  Claude responds best to XML-tagged sections with clear role definitions.
+  Place important instructions in <instructions> tags.
+  Use numbered lists for multi-step tasks.
+strengths:
+  - Long context understanding
+  - Instruction following
+  - Code generation
+  - Nuanced reasoning
+quirks:
+  - Tends to be verbose without explicit brevity instructions
+  - Responds well to persona/role assignments
+  - XML tags strongly influence output structure
+rewriteHints:
+  structureTags: xml
+  sectionOrder: "role,context,instructions,constraints,output_format"
+  emphasisMethod: "xml_tags_and_caps"

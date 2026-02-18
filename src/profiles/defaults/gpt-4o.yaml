@@ -1,0 +1,20 @@
+name: gpt-4o
+provider: openai
+preferredFormat: markdown
+systemPromptStyle: |
+  GPT-4o responds well to markdown-formatted prompts.
+  Use headers (##) for sections instead of XML tags.
+  Be explicit about output format expectations.
+strengths:
+  - Fast response times
+  - Good at structured output (JSON)
+  - Strong code generation
+  - Follows formatting instructions well
+quirks:
+  - May ignore XML tags or treat them as literal text
+  - System message positioning matters less
+  - Prefers explicit examples over abstract rules
+rewriteHints:
+  structureTags: markdown
+  sectionOrder: "context,instructions,constraints,output_format,examples"
+  emphasisMethod: "bold_and_headers"

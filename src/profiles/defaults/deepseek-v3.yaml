@@ -1,0 +1,20 @@
+name: deepseek-v3
+provider: deepseek
+preferredFormat: markdown
+systemPromptStyle: |
+  DeepSeek models work well with markdown-structured prompts.
+  Strong at code tasks. Use code blocks and explicit examples.
+  Chain-of-thought prompting improves reasoning quality.
+strengths:
+  - Excellent code generation and understanding
+  - Strong reasoning with chain-of-thought
+  - Good instruction following
+  - Cost effective
+quirks:
+  - XML tags treated as literal text, not structure
+  - Benefits from explicit thinking instructions
+  - May need temperature tuning for creative tasks
+rewriteHints:
+  structureTags: markdown
+  sectionOrder: "context,role,instructions,examples,output_format,constraints"
+  emphasisMethod: "bold_and_code_blocks"

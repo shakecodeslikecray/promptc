@@ -1,0 +1,19 @@
+name: glm-5
+provider: zhipu
+preferredFormat: markdown
+systemPromptStyle: |
+  GLM models respond best to clear, structured markdown prompts.
+  Avoid overly complex nesting. Keep instructions direct.
+  Chinese language prompts may yield better results for certain tasks.
+strengths:
+  - Strong multilingual support (especially Chinese)
+  - Good at following structured instructions
+  - Competitive reasoning ability
+quirks:
+  - XML tags may not be well understood
+  - Benefits from explicit step-by-step instructions
+  - May need more explicit output format specification
+rewriteHints:
+  structureTags: markdown
+  sectionOrder: "role,instructions,context,output_format,constraints"
+  emphasisMethod: "headers_and_numbered_lists"
