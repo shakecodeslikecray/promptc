@@ -10,7 +10,7 @@ Every model has a different behavioral grammar. Claude responds best to XML tags
 
 No existing tool addresses this. DSPy optimizes *what* you say. `promptc` optimizes *how you structurally present it*.
 
-See the paper: *Prompt Coupling: Formalizing Cross-Model Prompt Dependencies in Large Language Model Systems* (Sharma, 2026). arXiv link will be added upon publication.
+See the paper: [*Prompt Coupling: Formalizing Cross-Model Prompt Dependencies in Large Language Model Systems*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6262638) (Sharma, 2026), published on SSRN. A copy is included in this repo at [`paper/sharma2026_prompt_coupling.pdf`](paper/sharma2026_prompt_coupling.pdf).
 
 ## How It Works
 
@@ -159,7 +159,21 @@ src/
 
 ## Status
 
-This is a proof-of-concept accompanying the "Prompt Coupling" paper. It demonstrates feasibility, not production readiness. Contributions welcome.
+This is a proof-of-concept accompanying the "Prompt Coupling" paper. It demonstrates feasibility, not production readiness. In particular, the structural transforms are **not benchmarked** for downstream task performance — whether they preserve or improve results is an open empirical question, and the paper says so explicitly.
+
+The most useful contribution right now is evidence: run promptc against a real task suite and report what happens to accuracy and latency. Model profiles for new families are equally welcome.
+
+## Citing
+
+```bibtex
+@misc{sharma2026promptcoupling,
+  title        = {Prompt Coupling: Formalizing Cross-Model Prompt Dependencies in Large Language Model Systems},
+  author       = {Sharma, Abhishek},
+  year         = {2026},
+  howpublished = {SSRN},
+  url          = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6262638}
+}
+```
 
 ## License
 
